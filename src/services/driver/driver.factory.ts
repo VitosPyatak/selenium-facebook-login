@@ -1,6 +1,6 @@
 import { Builder, Capabilities, ThenableWebDriver } from 'selenium-webdriver';
 
-export class BuilderFactory {
+export class DriverFactory {
     private static chromeDriver: ThenableWebDriver;
 
     static get chrome() {

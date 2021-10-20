@@ -1,5 +1,5 @@
 import { config as initializeConfigs } from 'dotenv';
-import { BuilderFactory } from './src/services/builder/builder.factory';
+import { DriverFactory } from './src/services/driver/driver.factory';
 import { userData } from './src/services/configs/env.configs';
 import { emailInputId, facebookUrl, passwordInputId, submitButtonXPath } from './src/services/constants/general.constants';
 import { DriverService } from './src/services/driver/driver.service';
@@ -21,7 +21,7 @@ const clickLoginButton = (service: DriverService) => {
 
 (async () => {
     initializeConfigs();
-    const driverService = new DriverService(BuilderFactory.chrome);
+    const driverService = new DriverService(DriverFactory.chrome);
     await openFacebook(driverService);
     await setInputOfElements(driverService);
     await clickLoginButton(driverService);
