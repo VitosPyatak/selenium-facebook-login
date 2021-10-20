@@ -1,0 +1,21 @@
+{
+    "name": "facebook-login",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "dependencies": {
+        "dotenv": "^10.0.0",
+        "selenium-webdriver": "^4.0.0"
+    },
+    "devDependencies": {
+        "@types/dotenv": "^8.2.0",
+        "@types/node": "^16.11.1",
+        "@types/selenium-webdriver": "^4.0.15"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "tsc && node build/app.js"
+    },
+    "author": "",
+    "license": "ISC"
+}
