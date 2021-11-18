@@ -14,7 +14,8 @@
         "allowJs": true,
         "types": ["node"],
         "moduleResolution": "node",
-        "resolveJsonModule": true
+        "resolveJsonModule": true,
+        "noImplicitAny": false
     },
     "include": ["src/**/*", "app.ts"],
     "exclude": ["node_modules"]
