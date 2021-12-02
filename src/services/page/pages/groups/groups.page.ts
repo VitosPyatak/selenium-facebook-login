@@ -7,18 +7,18 @@ import { groupSettingsAriaLabel, groupSettingsClass, notificationDotsAriaLabel }
 
 export class GroupsPage implements Page {
     public execute = async (driver: DriverService) => {
-        await this.pressCreateGroup(driver);
+        await this.pressOptionsButton(driver);
         await this.switchNotificationDots(driver);
     };
 
-    private pressCreateGroup = async (driver: DriverService) => {
+    private pressOptionsButton = async (driver: DriverService) => {
         await driver.waitFor(this.settingsAriaLabel);
         const button = await driver.findByXPath(this.settingsAriaLabel);
         return driver.executeScript(pressElementScript, button);
     };
 
     private switchNotificationDots = async (driver: DriverService) => {
-        await driver.waitForClass(groupSettingsClass);
+        await driver.waitForElementByXpath(this.showNotificationDotsAriaLabel);
         const notificationSwitch = await driver.findByXPath(this.showNotificationDotsAriaLabel);
         return driver.executeScript(pressElementScript, notificationSwitch);
     };

@@ -32,6 +32,10 @@ export class DriverService {
         return this.driver.wait(until.elementLocated(By.className(classname)));
     };
 
+    public waitForElementByXpath = (xpath: string) => {
+        return this.driver.wait(until.elementLocated(By.xpath(xpath)));
+    };
+
     public executeScript = (script: string, element: WebElement) => {
         return this.driver.executeScript(script, element);
     };
